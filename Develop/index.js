@@ -64,41 +64,41 @@ var writeToFile = function (content) {
     var response = `# ${content.title} 
     
     # Table of Content
-    -[Description](#description)
-    -[Installation](#installation)
-    -[Usage](#usage)
-    -[Contributions](#contributions)
-    -[Test](#test)
-    -[Licenses](#licenses)
-    -[Contact](#contact)
+    [Description](#description)
+    [Installation](#installation)
+    [Usage](#usage)
+    [Contributions](#contributions)
+    [Test](#test-instructions)
+    [Licenses](#licenses)
+    [Contact](#contact)
 
-    ## Description:
+    ## Description
 
      ${content.description} 
 
-    ## Installation:
+    ## Installation
 
     ${content.installation}
 
-    ## Usage:
+    ## Usage
 
     ${content.usage}
     
-    ## Contribution:
+    ## Contributions
 
     ${content.contribution}
 
-    ## Test Instructions:
+    ## Test Instructions
 
     ${content.test}
 
-    ## Licenses: 
+    ## Licenses
 
     ${content.license}
 
-    ## Contact:
-    
-    ${content.github}
+    ## Contact
+
+    [Github Profile](https://github.com/${content.github})
     ${content.email}
         `
 
