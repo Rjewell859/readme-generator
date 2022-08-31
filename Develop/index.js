@@ -4,7 +4,7 @@ const fs = require('fs');
 const inquirer = require('inquirer')
 
 
-const fileLocation = '../README.md'
+const fileLocation = '../rEADME.md'
 
 const questions = [{
         type: 'input',
@@ -63,45 +63,44 @@ var writeToFile = function (content) {
 
     var response = `# ${content.title} 
     
-    # Table of Content
-    [Description](#description)
-    [Installation](#installation)
-    [Usage](#usage)
-    [Contributions](#contributions)
-    [Test](#test-instructions)
-    [Licenses](#licenses)
-    [Contact](#contact)
+# Table of Content
+[Description](#description)
+[Installation](#installation)    
+[Usage](#usage)
+[Contributions](#contributions)
+[Test](#test-instructions)
+[Licenses](#licenses)
+[Contact](#contact)
 
-    ## Description
+## Description
 
-     ${content.description} 
+${content.description} 
 
-    ## Installation
+## Installation
 
-    ${content.installation}
+${content.installation}
 
-    ## Usage
+## Usage
 
-    ${content.usage}
+${content.usage}
     
-    ## Contributions
+## Contributions
 
-    ${content.contribution}
+${content.contribution}
 
-    ## Test Instructions
+## Test Instructions
 
-    ${content.test}
+${content.test}
 
-    ## Licenses
+## Licenses
 
-    ${content.license}
+${content.license}
 
-    ## Contact
+## Contact
 
-    [Github Profile](https://github.com/${content.github})
-    ${content.email}
-        `
-
+[Github Profile](https://github.com/${content.github})
+${content.email}
+`
 
     fs.writeFile(fileLocation, response, err => {
         if (err) {
