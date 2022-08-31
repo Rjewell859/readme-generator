@@ -9,11 +9,11 @@
     [Licenses](#licenses)
     [Contact](#contact)
 
-    ## Description<a name="description"></a>
+    ## Description <a name="description"></a>
 
      A readme generator 
 
-    ## Installation<a name="installation"></a>
+    ## Installation <a name="installation"></a>
 
     No installation required
 
