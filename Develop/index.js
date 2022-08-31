@@ -4,7 +4,7 @@ const fs = require('fs');
 const inquirer = require('inquirer')
 
 
-const fileLocation = './generated/README.md'
+const fileLocation = '../README.md'
 
 const questions = [{
         type: 'input',
