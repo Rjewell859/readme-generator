@@ -40,7 +40,7 @@ const questions = [{
         type: 'list',
         message: 'Select a license',
         name: 'license',
-        choices: ['Apache', 'BSD', 'MIT', 'GNU', 'GPL'],
+        choices: ['Apache', 'BSD', 'MIT', 'GNU', 'MPL'],
     },
     {
         type: 'input',
@@ -54,23 +54,50 @@ const questions = [{
     },
 ];
 
+// 
+// 
+// 
+// 
+// 
+
 // TODO: Create a function to write README file
 
 var writeToFile = function (content) {
 
     content = JSON.parse(content)
+    var badge = ''
+    switch (content.license) {
+        case 'Apache':
+            badge = '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+            break;
+        case 'BSD':
+            badge = '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)'
+            break;
+        case 'MIT':
+            badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+            break;
+        case 'GNU':
+            badge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+            break;
+        case 'MPL':
+            badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)'
+        default:
+            return;
+    }
 
 
-    var response = `# ${content.title} 
+    var readmeGen = `# ${content.title} 
     
-# Table of Content
+## Table of Content
 [Description](#description)
 [Installation](#installation)    
 [Usage](#usage)
 [Contributions](#contributions)
 [Test](#test-instructions)
-[Licenses](#licenses)
+[License](#license)
 [Contact](#contact)
+
+${badge}
 
 ## Description
 
@@ -80,50 +107,49 @@ ${content.description}
 
 ${content.installation}
 
-## Usage
+### Usage
 
 ${content.usage}
     
-## Contributions
+### Contributions
 
 ${content.contribution}
 
-## Test Instructions
+### Test Instructions
 
 ${content.test}
 
-## Licenses
+#### License
 
-${content.license}
+This application is covered under ${content.license}
 
-## Contact
+#### Contact
 
 [Github Profile](https://github.com/${content.github})
 ${content.email}
 `
 
-    fs.writeFile(fileLocation, response, err => {
+    fs.writeFile(fileLocation, readmeGen, err => {
         if (err) {
             console.error(err);
         }
-        // file written successfully
+        else {
+            console.log("README.md successfully created!")
+        }
     });
 }
-var askQuestions = function () {
 
+var askQuestions = function () {
     inquirer
         .prompt(questions)
         .then((data) =>
-
             writeToFile(JSON.stringify(data))
-
         )
 }
 
 // TODO: Create a function to initialize app
 function init() {
     askQuestions()
-
 }
 
 // Function call to initialize app
