@@ -95,7 +95,7 @@ var writeToFile = function (content) {
 [Contributions](#contributions)
 [Test](#test-instructions)
 [License](#license)
-[Contact](#contact)
+[Questions](#questions)
 
 ${badge}
 
@@ -123,10 +123,11 @@ ${content.test}
 
 This application is covered under ${content.license}
 
-#### Contact
+#### Questions
 
-[Github Profile](https://github.com/${content.github})
-${content.email}
+See my repositories at [Github Profile](https://github.com/${content.github})
+
+Email me with additional questions at ${content.email}
 `
 
     fs.writeFile(fileLocation, readmeGen, err => {
