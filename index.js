@@ -1,10 +1,9 @@
-// TODO: Include packages needed for this application
 
 const fs = require('fs');
 const inquirer = require('inquirer')
 
 
-const fileLocation = '../rEADME.md'
+const fileLocation = './generated/README.md'
 
 const questions = [{
         type: 'input',
@@ -54,13 +53,6 @@ const questions = [{
     },
 ];
 
-// 
-// 
-// 
-// 
-// 
-
-// TODO: Create a function to write README file
 
 var writeToFile = function (content) {
 
@@ -148,10 +140,8 @@ var askQuestions = function () {
         )
 }
 
-// TODO: Create a function to initialize app
 function init() {
     askQuestions()
 }
 
-// Function call to initialize app
 init();
