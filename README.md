@@ -1,41 +1,29 @@
 # readme-generator 
     
 ## Table of Content
+
 [Description](#description)
 [Installation](#installation)    
 [Usage](#usage)
-[Contributions](#contributions)
-[Test](#test-instructions)
-[License](#license)
 [Contact](#contact)
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## Description
 
-This project generates readme files after the user answers a prompt 
+This project is for generating readme files based on responses to questions. It will produce a new file with the aquired input.
 
 ## Installation
 
-Install inquirer
+No installation required. 
 
 ### Usage
 
-type node index.js into the terminal and answer the questions
-    
-### Contributions
-
-commit as often as possible and contribute as much as possible
-
-### Test Instructions
-
-putting the information describing this project into the readme generator
-
-#### License
-
-This application is covered under GNU
+Use 'node index.js' to begin program.
 
 #### Contact
+
+To contact me use my email or visit my gihub profile.
 
 [Github Profile](https://github.com/rjewell859)
 headwallforest27@gmail.com
