@@ -2,6 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer')
 
+// Declaring questions
 
 const fileLocation = './generated/README.md'
 
@@ -53,6 +54,7 @@ const questions = [{
     },
 ];
 
+// Writing file
 
 var writeToFile = function (content) {
 
