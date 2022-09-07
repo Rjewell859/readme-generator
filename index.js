@@ -54,7 +54,7 @@ const questions = [{
     },
 ];
 
-// Writing file
+// Writing file - determining license
 
 var writeToFile = function (content) {
 
@@ -79,6 +79,7 @@ var writeToFile = function (content) {
             return;
     }
 
+// populating file
 
     var readmeGen = `# ${content.title} 
     
@@ -123,6 +124,7 @@ See my repositories at [Github Profile](https://github.com/${content.github})
 
 Email me with additional questions at ${content.email}
 `
+// writing file 
 
     fs.writeFile(fileLocation, readmeGen, err => {
         if (err) {
@@ -133,6 +135,9 @@ Email me with additional questions at ${content.email}
         }
     });
 }
+
+
+// asking questions 
 
 var askQuestions = function () {
     inquirer
