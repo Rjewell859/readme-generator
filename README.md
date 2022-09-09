@@ -11,15 +11,15 @@
 
 ## Description
 
-This project is for generating readme files based on responses to questions. It will produce a new file with the aquired input.
+This project is for generating readme files based on responses to questions. It will produce a new file with the acquired input. This features a table of content with functional links to the multiple sections on the page. As well a license badge is displayed under the table of content section using an API. A link to the users github account will be added on the bottom of the screen as well as their email, provided the credentials were entered in correctly.
 
 ## Installation
 
-No installation required. 
+No installation required. Use 'node index.js' to begin program.
 
 ### Usage
 
-Use 'node index.js' to begin program.
+Respond to the prompts after the program begins. When completed 'README.md successfully created!' will display in the console and the generated file will be the repository in a folder named 'generated'.
 
 #### Contact
 
